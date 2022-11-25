@@ -1,0 +1,7 @@
+cd project
+touch f1.txt
+git init
+git add .
+git add f1.txt
+git status
+

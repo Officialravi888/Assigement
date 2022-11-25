@@ -1,0 +1,183 @@
+
+                                                               Assignment1
+                                                               
+
+http://www.btechsmartclass.com/java/java-selection-statements.html
+https://linuxhint.com/java-interfaces/#1
+
+Explain OOPs Concepts With Real Time Examples
+1.Encapsulation--:Encapsulation is the process of combining data and code into a single unit (object / class). In OOP, every object is associated with its data and code. In programming, data is defined as variables and code is defined as methods. The java programming language uses the class concept to implement encapsulation.
+
+2.Inheritance--:Inheritance is the process of acquiring properties and behaviors from one object to another object or one class to another class. 
+
+3.Polymorphism--:Polymorphism is the process of defining same method with different implementation. That means creating multiple methods with different behaviors.
+The java uses method overloading and method overriding to implement polymorphism.
+
+4.Abstraction--:Abstraction is hiding the internal details and showing only esential functionality. In the abstraction concept we do not show the actual implemention to the end user instead we provide only esential things. 
+
+    • How to prevent inheritance and method overriding ? 
+      prevent inheritance--:The inheritance is a very useful and powerful concept of object-oriented programming. In java, using the inheritance concept, we can use the existing features of one class in another class. The inheritance provides a greate advantage called code re-usability. With the help of code re-usability the commonly used code in an application need not be written again and again.
+      
+      method overriding--:The method overriding is the process of re-defining a method in a child class that is already defined in the parent class. When both parent and child classes have the same method, then that method is said to be the overriding method
+
+    • Can we declare main method as final ?--:method is a block of statement under a name that get executes only when it is called.every method is used to perform a specific task.
+    returnType-Specifies the data of a return value
+    name-Specifies a unique name to identify it
+    parameters-the data values accept
+    {}-defiens the block belongsto the method
+    SYNTAX--calling method
+    class <ClassName>{
+    	<accessSpecifier> <returnType> <methodName>(parameters){
+    	....
+    	block of statements;
+    	...
+    	}
+    }
+
+    • Is Multiple inheritance supported in Java ? Why ?
+    SYNTAX-Example
+    class PrarentClass{
+    int a;
+    void setdata(int a) {
+    this.a =a;
+    }
+    }
+    class childclass extends parentClass{
+    void showData(){
+    System.out.println("value of a is " + a);
+    }
+    }
+    child childChildClass extends ChildClass{
+    void display(){
+    System.out.println("inside ChildChildClass");
+    }
+    }
+    public class MultipleInheritance{
+    public static void main(String[]args){
+    ChildChildClass obj = new ChildChildClass();
+    obj.setData(100);
+    obj.showData();
+    obj.display();
+    }
+    }
+    
+
+    • Execution sequence for static block, block, constructor and method.
+    Ststic block-:code that is run once for each time a class is loaded into memory
+    
+    Constructor--:Constructor in java is a special method that is used to initialize object the constructor is called when an object of a class is created.
+    method--:method is a block of statement under a name that gets executes only when it is called every method is use to perform a specific task.                                           
+
+    • Can we run abstract class which has main method ?
+    abstract class--:Abstract class is aclass that created using abstract keyword in other words a class prefixed with abstract keyword is known as an abstract class
+    
+    import java.util.*;
+
+abstract class Shape {
+	int length, breadth, radius;
+	Scanner input = new Scanner(System.in);
+
+	abstract void printArea();
+
+}
+
+class Rectangle extends Shape {
+	void printArea() {
+		System.out.println("*** Finding the Area of Rectangle ***");
+		System.out.print("Enter length and breadth: ");
+		length = input.nextInt();
+		breadth = input.nextInt();
+		System.out.println("The area of Rectangle is: " + length * breadth);
+	}
+}
+
+class Triangle extends Shape {
+	void printArea() {
+		System.out.println("\n*** Finding the Area of Triangle ***");
+		System.out.print("Enter Base And Height: ");
+		length = input.nextInt();
+		breadth = input.nextInt();
+		System.out.println("The area of Triangle is: " + (length * breadth) / 2);
+	}
+}
+
+class Cricle extends Shape {
+	void printArea() {
+		System.out.println("\n*** Finding the Area of Cricle ***");
+		System.out.print("Enter Radius: ");
+		radius = input.nextInt();
+		System.out.println("The area of Cricle is: " + 3.14f * radius * radius);
+	}
+}
+
+public class AbstractClassExample {
+	public static void main(String[] args) {
+		Rectangle rec = new Rectangle();
+		rec.printArea();
+
+		Triangle tri = new Triangle();
+		tri.printArea();
+		
+		Cricle cri = new Cricle();
+		cri.printArea();
+	}
+}
+
+    • What is Marker Interface ?--:The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+
+    • Difference between an Interface and Abstract Class
+    interface--:The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body. It is used to achieve abstraction and multiple inheritance in Java.
+    
+    abstract class--:Abstract class is aclass that created using abstract keyword in other words a class prefixed with abstract keyword is known as an abstract class
+
+    • Can we override a static method ?--:A static method in java is amethod that is part of a class rather than an instance of that class
+    every instance of a class has access to the method 
+    static method have access to class variable without using theclass obj
+    only static data may be accessed by a static method
+
+    • Can we make constructors static ? --:It is a special type of method, which is used to create an object There is no return type in It is always non-static Constructor is always named after the class in which it exists.
+    1.Parameterized/user defined 
+    2.Non-parameterized/default  
+
+
+    • Can we override the overloaded method ?--:If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+    class Adder{  
+static int add(int a,int b){return a+b;}  
+static int add(int a,int b,int c){return a+b+c;}  
+}  
+class TestOverloading1{  
+public static void main(String[] args){  
+System.out.println(Adder.add(11,11));  
+System.out.println(Adder.add(11,11,11));  
+}}  
+
+    • Can we override the private methods ?
+
+    • Difference between Constructor and Method ?
+    Constractor--:A Constractor is aspicial type of method whose name is same 
+
+    • Can we execute a program without main() method ?
+    The Java main method is usually the first method you learn about when you start programming in Java because its the entry point for executing a Java program. 
+
+    • Can you use abstract and final both with a method ?
+    Abstract-:Java abstract classes are used to attain data abstraction. The Java abstraction hides the implementation/critical details from the user and shows only the utility or functionality.
+    
+abstract class Example{
+  abstract void exampleMethod();
+  void regularMethod(){
+  //method body  
+  }
+}
+
+    • Can we declare a constructor as final ?--:Constructor in java is used to create the instance of nthe class
+    constructors are almost similar to methods except for two things-its name is same as class name and it has no returntype..
+    type--default constructor,no args constructor,parameterrized constructor
+    /home/hp/Pictures/Screenshot from 2022-11-25 15-48-10.png
+  
+
+    • Can we declare an interface as final ?
+
+    • Distinguish between static loading and dynamic class loading ?
+    static loading--:The mechanism when the complete program with all routines and data arw loaded into memory for execution
+    Dynamic class loading--:the mechanism when the main program is loaded in to memory and the routines are loaded in to memory only when they are called is known as dynamic loading
+
